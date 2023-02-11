@@ -7,8 +7,9 @@ import { DetailsNoteComponent } from './details-note/details-note.component';
 
 const routes: Routes = [
 
-  {path:'',component:AppComponent},
-  {path:'salarie',canActivate:[RoleGuard] ,loadChildren: () =>import('./core/salarie/salarie.module').then((m)=>m.SalarieModule)}
+
+  {path:'salarie',canActivate:[RoleGuard] ,loadChildren: () =>import('./core/salarie/salarie.module').then((m)=>m.SalarieModule)},
+  {path:'' ,loadChildren: () =>import('./core/auth/auth.module').then((m)=>m.AuthModule)}
 
 ];
 
