@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ListNotesComponent } from './list-notes/list-notes.component';
 import { DetailsNoteComponent } from './details-note/details-note.component';
 import {HttpClientModule} from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
