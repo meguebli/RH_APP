@@ -1,3 +1,4 @@
+import { CvThequeModule } from './core/cv-theque/cv-theque.module';
 import { RoleGuard } from './midellware/role.guard';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -7,10 +8,10 @@ import { DetailsNoteComponent } from './details-note/details-note.component';
 
 const routes: Routes = [
 
-
   {path:'salarie',canActivate:[RoleGuard] ,loadChildren: () =>import('./core/salarie/salarie.module').then((m)=>m.SalarieModule)},
-  {path:'' ,loadChildren: () =>import('./core/auth/auth.module').then((m)=>m.AuthModule)}
+  {path:'' ,loadChildren: () =>import('./core/auth/auth.module').then((m)=>m.AuthModule)},
 
+  {path:'cv',loadChildren:()=>import ('./core/cv-theque/cv-theque.module').then((m)=>m.CvThequeModule)}
 ];
 
 @NgModule({
